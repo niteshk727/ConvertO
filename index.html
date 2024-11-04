@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Create this file later -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.0.5/compressor.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">File Converter Tools</h1>
+        <div id="tools" class="mt-4">
+            <!-- Tools will be added here -->
+             <!-- Designing Image to PDF Converter -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Image to PDF</h5>
+                </div>
+                <div class="card-body">
+                    <input type="file" id="imageInput" accept="image/*" />
+                    <button id="convertBtn" class="btn btn-primary mt-3">Convert to PDF</button>
+                </div>
+            </div>
+            <!-- Designing Image Compressor -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Image Compressor</h5>
+                </div>
+                <div class="card-body">
+                    <input type="file" id="compressImageInput" accept="image/*" />
+                    <button id="compressBtn" class="btn btn-primary mt-3">Compress Image</button>
+                    <a id="downloadCompressed" style="display: none;" class="btn btn-success mt-3">Download Compressed Image</a>
+                </div>
+            </div>
+            <!-- Designing text to PDF -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Text to PDF</h5>
+                </div>
+                <div class="card-body">
+                    <textarea id="textInput" rows="5" class="form-control" placeholder="Enter your text here..."></textarea>
+                    <button id="generatePdfBtn" class="btn btn-primary mt-3">Generate PDF</button>
+                    <a id="downloadPdf" style="display: none;" class="btn btn-success mt-3">Download PDF</a>
+                </div>
+            </div>
+            <!-- Designing PDF Split and Merge -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>PDF Split and Merge</h5>
+                </div>
+                <div class="card-body">
+                    <input type="file" id="pdfInput" accept="application/pdf" class="form-control" />
+                    <button id="splitPdfBtn" class="btn btn-primary mt-3">Split PDF</button>
+                    <button id="mergePdfBtn" class="btn btn-primary mt-3">Merge PDF</button>
+                    <a id="downloadSplit" style="display: none;" class="btn btn-success mt-3">Download Split PDF</a>
+                    <a id="downloadMerge" style="display: none;" class="btn btn-success mt-3">Download Merged PDF</a>
+                </div>
+            </div>
+            <!-- Designing File Format Converter -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>File Format Converters</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Image to PNG</h6>
+                    <input type="file" id="imageToPngInput" accept="image/*" class="form-control" />
+                    <button id="convertToPngBtn" class="btn btn-primary mt-3">Convert to PNG</button>
+                    <a id="downloadPng" style="display: none;" class="btn btn-success mt-3">Download PNG</a>
+            
+                    <h6 class="mt-4">Image to JPEG</h6>
+                    <input type="file" id="imageToJpegInput" accept="image/*" class="form-control" />
+                    <button id="convertToJpegBtn" class="btn btn-primary mt-3">Convert to JPEG</button>
+                    <a id="downloadJpeg" style="display: none;" class="btn btn-success mt-3">Download JPEG</a>
+            
+                    <h6 class="mt-4">Audio to MP3</h6>
+                    <input type="file" id="audioToMp3Input" accept="audio/*" class="form-control" />
+                    <button id="convertToMp3Btn" class="btn btn-primary mt-3">Convert to MP3</button>
+                    <a id="downloadMp3" style="display: none;" class="btn btn-success mt-3">Download MP3</a>
+                </div>
+            </div>
+            <!-- Designing Watermarking Tools -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Watermarking Tool</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Upload Image for Watermark</h6>
+                    <input type="file" id="watermarkInput" accept="image/*" class="form-control" />
+                    
+                    <h6 class="mt-3">Watermark Text</h6>
+                    <input type="text" id="watermarkText" class="form-control" placeholder="Enter watermark text" />
+                    
+                    <button id="addWatermarkBtn" class="btn btn-primary mt-3">Add Watermark</button>
+                    <a id="downloadWatermarked" style="display: none;" class="btn btn-success mt-3">Download Watermarked Image</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Create this file later -->
+</body>
+</html>
